@@ -138,6 +138,10 @@ body {
         align-items: center;
         justify-content: space-evenly;
         margin-bottom: 10px;
+
+        p{
+            margin-top: 4px;
+        }
     }
 
     #onMenuClick {
@@ -385,7 +389,7 @@ body {
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         overflow-y: scroll;
 
         &::-webkit-scrollbar {
@@ -396,6 +400,7 @@ body {
             width: 100%;
             height: auto;
             display: flex;
+            margin: 5px 0;
 
             &:hover{
                 background-color: #cedce7;

@@ -209,6 +209,10 @@ body {
   margin-bottom: 10px;
 }
 
+.player-display .display-inner p {
+  margin-top: 4px;
+}
+
 .player-display #onMenuClick {
   display: block;
   outline: none;
@@ -494,9 +498,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   overflow-y: scroll;
 }
 
@@ -510,6 +514,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 5px 0;
 }
 
 .list-items .list-unstyled .media:hover {

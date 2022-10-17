@@ -50,12 +50,11 @@ urlInput.addEventListener("keypress", function (e) {
         urlInput.value = '';
 
         async function search(searchValue) {
-            let ytResp = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&q=${searchValue}&part=snippet&type=video&maxResults=3`);
+            let ytResp = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&q=${searchValue}&part=snippet&type=video&maxResults=10`);
             // console.log(ytResp);
             let data = await ytResp.json();
-            console.log(data);
             let videos = data.items;
-            videos.forEach((el) => {
+            videos.forEach((el, i) => {
                 let divTag = document.createElement('li');
                 divTag.classList.add('media');
                 divTag.setAttribute('id', `${el.id.videoId}`)
@@ -69,11 +68,18 @@ urlInput.addEventListener("keypress", function (e) {
 
             });
             video = document.querySelectorAll('.media');
-            video.forEach((el) => { 
+            video.forEach((el) => {
                 el.addEventListener("click", (e) => {
                     videoId = el.id;
                     onInputActive(videoId);
                     videoList.style.display = "none";
+
+                    let musicTitle = document.getElementById('music-title');
+                    musicTitle.innerHTML = `${truncate(e.target.innerHTML, 20)}`;
+
+                    function truncate(str, n) {
+                        return (str.length > n) ? str.slice(0, n - 1) + '...' : str;
+                    }
                 })
             })
         }
