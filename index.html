@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="cols">
+            <div class="col">
+                <div class="container" id="container">
+                    <div class="front" id="front">
+                        <div class="inner">
+                            <div class="player-display" id="display-inner">
+                                <div class="display-inner">
+                                    <p id="music-title"
+                                        style="color:#000; font-size:12px; font-weight: 600; width: 100%; position: relative;">
+                                        MUSIC TITLE</p>
+                                    <span id="volume-settings"
+                                        style="position: absolute; top: 8px; right: 9px; z-index: 5; width: auto; height: auto;">
+                                        <img id="volume-icon" src="image/medium-volume.png"
+                                            style="width: 18px; height: 18px; display: block;" alt="">
+                                        <img id="mute-icon" src="image/mute.png"
+                                            style="width: 18px; height: 18px; display: none;" alt="">
+                                    </span>
+                                    <div class="volume-control volume-display" id="volume-control">
+                                        <div class="progress-area-volume" id="progress-area-volume">
+                                            <div class="progress-bar-volume" id="progress-bar-volume"></div>
+                                        </div>
+                                    </div>
+                                    <div id="ytplayer"></div>
+                                    <div class="list-items">
+                                        <ul class="list-unstyled" id="videoList"></ul>
+                                    </div>
+                                    <!-- <img alt=""
+                                        style="background-image: url(image/music-background.jpg);background-repeat: no-repeat; background-size: cover; width:200px; height: 180px;"> -->
+                                    <div class="progress-area" id="progress">
+                                        <div class="progress-bar" id="percent_play"></div>
+                                        <div class="progress-bar-inner" id="progress-bar-inner"></div>
+                                        <div class="song-timer">
+                                            <span class="current-time">0:00</span>
+                                            <span class="max-duration">0:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="text" id="onMenuClick" class="input-field" id="input-text" placeholder="ENTER SONG NAME" value="">
+                            </div>
+                            <div class="player-controls" id="player-controls">
+                                <div class="player-controls-inner"></div>
+                                <div class="icons control-1" id="Menu">MENU</div>
+                                <div class="icons control-2"><img src="image/backward.png" alt=""></div>
+                                <div class="icons control-3"><img src="image/fast-forward.png" alt=""></div>
+                                <div class="icons control-4" id="control-4">
+                                    <img src="image/play-button-arrowhead.png" id="play" alt="" style="display: block;">
+                                    <img src="image/pause.png" id="pause" alt="" style="display: none;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back" id="back">
+                        <div class="inner">
+                            <img src="image/apple-logo.png" alt="">
+                            <p>iPod</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
